@@ -14,7 +14,6 @@ app = Flask( __name__ )
 @app.route( '/predict', methods=['POST'] )
 def health_insurance_predict():
     test_json = request.get_json()
-    test_json = json.loads(test_json)
    
     if test_json: # there is data
         if isinstance( test_json, dict ): # unique example
