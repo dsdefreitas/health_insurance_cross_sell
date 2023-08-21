@@ -38,7 +38,7 @@ class HealthInsurance():
 
         #annual_premium
 
-        df4['annual_premium'] = self.annual_premium_scaler.fit_transform(df5[['annual_premium']].values)
+        df4['annual_premium'] = self.annual_premium_scaler.fit_transform(df4[['annual_premium']].values)
 
         #não se aproximam de uma normal 
         
