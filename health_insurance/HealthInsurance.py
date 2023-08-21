@@ -44,23 +44,23 @@ class HealthInsurance():
         
         #Age
 
-        df4['age'] = self.age_scaler.fit_transform(df5[['age']].values) 
+        df4['age'] = self.age_scaler.fit_transform(df4[['age']].values) 
 
         # vintage
 
-        df4['vintage'] = self.age_scaler.fit_transform(df5[['vintage']].values) 
+        df4['vintage'] = self.age_scaler.fit_transform(df4[['vintage']].values) 
         
         #gender - Target Enconding 
-        df4.loc[:, 'gender'] = df5['gender'].map(self.target_encode_gender_scaler) #substitui male por 0.138411 e female por 0.103902
+        df4.loc[:, 'gender'] = df4['gender'].map(self.target_encode_gender_scaler) #substitui male por 0.138411 e female por 0.103902
 
         #region_code - Target Encoding
-        df4.loc[:, 'region_code'] = df5['region_code'].map(self.target_encode_region_code)
+        df4.loc[:, 'region_code'] = df4['region_code'].map(self.target_encode_region_code)
 
         #vehicle_age - One Hot Encoding 
-        df4 = pd.get_dummies(df5, prefix='vehicle_age', columns=['vehicle_age'])
+        df4 = pd.get_dummies(df4, prefix='vehicle_age', columns=['vehicle_age'])
 
         #policy_sales_channel - Frequency Encoding 
-        df4.loc[:, 'policy_sales_channel'] = df5['policy_sales_channel'].map(self.fe_policy_sales_channel)    
+        df4.loc[:, 'policy_sales_channel'] = df4['policy_sales_channel'].map(self.fe_policy_sales_channel)    
         
         # 6.0 Feature Selection 
         
