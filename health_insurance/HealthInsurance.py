@@ -8,7 +8,7 @@ class HealthInsurance():
         self.annual_premium_scaler = pickle.load(open('src/features/annual_premium_scaler.pkl', 'rb'))
         self.age_scaler = pickle.load(open('src/features/age_scaler.pkl', 'rb'))
         self.vintage_scaler = pickle.load(open('src/features/vintage_scaler.pkl', 'rb'))
-        self.target_encode_gender_scaler = pickle.load(open('/src/features/target_encode_gender_scaler.pkl', 'rb'))
+        self.target_encode_gender_scaler = pickle.load(open('src/features/target_encode_gender_scaler.pkl', 'rb'))
         self.target_encode_region_code = pickle.load(open('src/features/target_encode_region_code_scaler.pkl', 'rb'))
         self.fe_policy_sales_channel = pickle.load(open('src/features/fe_policy_sales_channel_scaler.pkl', 'rb'))
         
