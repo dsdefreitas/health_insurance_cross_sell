@@ -6,7 +6,7 @@ from health_insurance.HealthInsurance import HealthInsurance
 import json
 
 # loading model
-model = pickle.load(open('models/model_lgbm.pkl', 'rb'))
+model = pickle.load(open('models/model_lgbm2.pkl', 'rb'))
 
 # initialize API
 app = Flask( __name__ )
